@@ -1,10 +1,11 @@
 {% load forms %}
-{% input  field="Demographics.hospital_number"  %}
-{% input  field="Demographics.nhs_number"  %}
-{% datepicker  field="Demographics.date_of_birth"  %}
-{% input  field="Demographics.surname"  %}
+{% input field="Demographics.hospital_number" %}
 {% input  field="Demographics.first_name"  %}
-{% input  field="Demographics.middle_name"  %}
+{% input  field="Demographics.surname"  %}
+
+{% datepicker  field="Demographics.date_of_birth"  %}
+{% input field="Demographics.fuzzy_age" %}
+
 {% input  field="Demographics.sex"  %}
 {% input  field="Demographics.birth_place"  %}
 {% input  field="Demographics.ethnicity"  %}
