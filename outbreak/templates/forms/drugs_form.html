@@ -1,0 +1,10 @@
+{% load forms %}
+
+<div class="form-group">
+    {% input "autofocus" label="Drug" model="editing.drugs.drug" lookuplist="antimicrobial_list" %}b
+    {% datepicker label="Start date" model="editing.drugs.start_date" %}
+    {% datepicker label="End date" model="editing.drugs.end_date" %}
+    {% input label="Dose" model="editing.drugs.dose" %}
+    {% input label="Route" model="editing.drugs.route" lookuplist="antimicrobial_route_list" %}
+    {% select label="Frequency" model="editing.drugs.frequency" lookuplist="antimicrobial_frequency_list" %}
+</div>

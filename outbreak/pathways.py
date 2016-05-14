@@ -7,6 +7,7 @@ from outbreak import models
 from obs import models as obsmodels
 
 class TriagePathway(pathways.UnrolledPathway):
+#class TriagePathway(pathways.Pathway):
     display_name = 'Triage patient'
     slug = 'triage'
 
@@ -24,6 +25,9 @@ class TriagePathway(pathways.UnrolledPathway):
 
 
         pathways.MultSaveStep(model=obsmodels.Observation),
-        # pathways.MultSaveStep(model=models.Investigation),
-        # pathways.MultSaveStep(model=models.Treatment)
+
+        pathways.MultSaveStep(model=models.Drugs),
+        pathways.MultSaveStep(model=models.Feeding),
+        pathways.MultSaveStep(model=models.Fluids),
+
     )

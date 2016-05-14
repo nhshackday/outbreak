@@ -12,7 +12,7 @@ class AllPatientsList(core.patient_lists.PatientList):
     schema = [
         models.Demographics,
         models.Diagnosis,
-        models.Treatment
+        models.Drugs
     ]
 
     def get_queryset(self):
