@@ -62,6 +62,26 @@ class PatientHistory(models.EpisodeSubrecord):
     immunisations_up_to_date = fields.NullBooleanField()
 
 
+class Findings_cardiovascular(lookuplists.LookupList):
+    class Meta:
+        verbose_name = "Findings cardiovascular"
+
+class Findings_respiratory(lookuplists.LookupList):
+    class Meta:
+        verbose_name = "Findings respiratory"
+
+class Findings_abdominal(lookuplists.LookupList):
+    class Meta:
+        verbose_name = "Findings abdominal"
+
+class Findings_oropharnyx(lookuplists.LookupList):
+    class Meta:
+        verbose_name = "Findings oropharnyx"
+
+class Findings_neurological(lookuplists.LookupList):
+    class Meta:
+        verbose_name = "Findings neurological"
+
 class Examination(models.EpisodeSubrecord):
     _title        = 'Examination'
     _icon         = 'fa fa-stethoscope'
@@ -75,9 +95,9 @@ class Examination(models.EpisodeSubrecord):
     rash_type               = ForeignKeyOrFreeText(Findings_rash_type)
     rash_distribution       = ForeignKeyOrFreeText(Findings_rash_distribution)
 
-    cardiovascular          = fields.CharField(max_length=255, blank=True, null=True)
-    respiratory             = fields.CharField(max_length=255, blank=True, null=True)
-    abdominal               = fields.CharField(max_length=255, blank=True, null=True)
-    oropharnyx              = fields.CharField(max_length=255, blank=True, null=True)
-    neurological            = fields.CharField(max_length=255, blank=True, null=True)
+    cardiovascular          = ForeignKeyOrFreeText(Findings_cardiovascular)
+    respiratory             = ForeignKeyOrFreeText(Findings_respiratory)
+    abdominal               = ForeignKeyOrFreeText(Findings_abdominal)
+    oropharnyx              = ForeignKeyOrFreeText(Findings_oropharnyx)
+    neurological            = ForeignKeyOrFreeText(Findings_neurological)
     other_findings          = fields.CharField(max_length=255, blank=True, null=True)
