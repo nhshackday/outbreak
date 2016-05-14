@@ -1,0 +1,44 @@
+{% load panels %}
+<div class="col-md-12">
+  <div class="panel panel-active">
+    <div class="panel-heading text-center">
+      <h3>
+        {% block title %}
+        Inpatient admission
+        [[ episode.date_of_admission | shortDate]]
+          <span ng-show="episode.discharge_date"> - [[ episode.discharge_date | shortDate ]]</span>
+        {% endblock title %}
+      </h3>
+    </div>
+    <!-- <div class="panel-body"> -->
+    <!--   <center> -->
+    <!--     <button -->
+    <!--        ng-hide="profile.readonly" -->
+    <!--        ng-click="dischargeEpisode(episode)" -->
+    <!--        class="btn btn-primary btn-lg"> -->
+    <!--       <i class="fa fa-home"></i> -->
+    <!--       <span ng-show="episode.discharge_date">Confirm</span> -->
+    <!--       Discharge -->
+    <!--     </button> -->
+    <!--   </center> -->
+    <!-- </div> -->
+  </div>
+</div>
+
+<div class="col-md-6"> <!-- Detail panels col 1 -->
+  {% include "partials/current_location.html" %}
+  {% teams_panel %}
+  {% record_panel models.Allergies noentries="No known allergies"%}
+  {% record_panel models.InpatientAdmission editable=False %}
+  {% record_panel models.PastMedicalHistory %}
+  {% record_panel models.Travel %}
+  {% record_timeline models.MicrobiologyInput "when" %}
+</div>                 <!-- Ends Detail panels col 1 -->
+<div class="col-md-6"> <!-- Detail panels col 2 -->
+  {% record_panel models.PresentingComplaint %}
+  {% record_panel models.Diagnosis %}
+  {% record_panel models.Antimicrobial %}
+  {% record_panel models.MicrobiologyTest %}
+  {% record_panel models.Todo %}
+  {% record_panel models.GeneralNote %}
+</div>                 <!-- Ends Detail panels col 2 -->

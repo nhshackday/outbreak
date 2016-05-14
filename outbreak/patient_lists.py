@@ -8,6 +8,7 @@ from outbreak import models
 
 class AllPatientsList(core.patient_lists.PatientList):
     display_name = 'All Patients'
+    template_name = 'patient_list.html'
 
     schema = [
         models.Demographics,

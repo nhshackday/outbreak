@@ -1,0 +1,68 @@
+$lightestblue: #86F3DB;
+$lightblue: #50e3c2;
+$blue: #23a5f5;
+$red: #E70101;
+$yellow: #f8e71c;
+$green: #F8E71C;
+$grey: #d4d4d4;
+
+body {
+    background-color: white;
+}
+.top-navbar {
+    background-color: $lightestblue;
+    color: black;
+    font-weight: bold;
+}
+.navbar-default .navbar-brand {
+    color: black;
+}
+.loading {
+    background-color: white;
+}
+.add-patient{
+    margin-top: 30px;
+}
+
+.bg-grey {
+    background-color: $grey;
+}
+.patient div{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.patient p{
+    font-size: 130%;
+}
+.obs {
+    background-color: $yellow;
+}
+.list-buttons, .add-patient {
+    margin-bottom: 10px;
+}
+.list-buttons .btn-primary {
+    padding: 32px 10px 32px 10px;
+    min-width: 160px;
+}
+
+.btn-primary {
+  background-color: $lightblue;
+  border-color: $lightblue;
+  padding: 32px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: $lightblue;
+  border-color: $lightblue;
+}
+.btn-primary.add-patient,
+.btn-primary.add-patient:hover,
+.btn-primary.add-patient:focus {
+    background-color: $blue;
+    border-color: $blue;
+}
+
+.modal-header {
+  background: $lightestblue;
+  }

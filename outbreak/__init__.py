@@ -10,3 +10,6 @@ class Application(application.OpalApplication):
         'js/outbreak/routes.js',
         'js/opal/controllers/discharge.js'
     ]
+    styles = [
+        'css/outbreak.css'
+    ]

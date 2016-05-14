@@ -1,0 +1,63 @@
+{% load forms %}
+
+<div class="container content-offset">
+  <div class="row add-patient">
+    <div class="col-sm-12">
+      <center>
+      <button class="btn btn-primary btn-lg add-patient"
+              ng-show="!profile.readonly"
+              ng-click="addEpisode()">
+        <i class="glyphicon glyphicon-plus"></i>
+        Add Patient
+      </center>
+    </div>
+  </div>
+  <div class="row patient" ng-repeat="row in rows">
+    <div class="col-sm-5 bg-grey">
+      <p>
+        Patient Name: <b>[[ row.demographics[0].first_name ]] [[ row.demographics[0].surname ]]</b>
+      </p>
+    </div>
+    <div class="col-sm-3 bg-grey">
+      <p>
+        Age: [[ row.demographics[0].fuzzy_age ]]
+      </p>
+    </div>
+    <div class="col-sm-4 obs">
+      <p>
+        Last Observations:
+      </p>
+    </div>
+    <div class="row list-buttons">
+      <div class="col-sm-3">
+        <button class="btn btn-primary btn-lg add-patient"
+                ng-show="!profile.readonly"
+                ng-click="addEpisode()">
+          View Details
+        </button>
+      </div>
+      <div class="col-sm-3">
+        <button class="btn btn-primary btn-lg add-patient"
+                ng-show="!profile.readonly"
+                ng-click="addEpisode()">
+          Observation
+        </button>
+      </div>
+      <div class="col-sm-3">
+        <button class="btn btn-primary btn-lg add-patient"
+                ng-show="!profile.readonly"
+                ng-click="addEpisode()">
+          Treatment
+        </button>
+      </div>
+      <div class="col-sm-3">
+        <button class="btn btn-primary btn-lg add-patient"
+                ng-show="!profile.readonly"
+                ng-click="addEpisode()">
+          Clinical Decision
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

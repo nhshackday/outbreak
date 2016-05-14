@@ -1,0 +1,57 @@
+body {
+  background-color: white; }
+
+.top-navbar {
+  background-color: #86F3DB;
+  color: black;
+  font-weight: bold; }
+
+.navbar-default .navbar-brand {
+  color: black; }
+
+.loading {
+  background-color: white; }
+
+.add-patient {
+  margin-top: 30px; }
+
+.bg-grey {
+  background-color: #d4d4d4; }
+
+.patient div {
+  padding-top: 20px;
+  padding-bottom: 40px; }
+
+.patient p {
+  font-size: 130%; }
+
+.obs {
+  background-color: #f8e71c; }
+
+.list-buttons, .add-patient {
+  margin-bottom: 10px; }
+
+.list-buttons .btn-primary {
+  padding: 32px 10px 32px 10px;
+  min-width: 160px; }
+
+.btn-primary {
+  background-color: #50e3c2;
+  border-color: #50e3c2;
+  padding: 32px; }
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #50e3c2;
+  border-color: #50e3c2; }
+
+.btn-primary.add-patient,
+.btn-primary.add-patient:hover,
+.btn-primary.add-patient:focus {
+  background-color: #23a5f5;
+  border-color: #23a5f5; }
+
+.modal-header {
+  background: #86F3DB; }
+
+/*# sourceMappingURL=outbreak.css.map */
