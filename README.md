@@ -1,4 +1,4 @@
-This is outbreak - an [OPAL](https://github.com/openhealthcare/opal) project.
+This is outbreak - an [NHS Hack Day](http://nhshackday.com) project.
 
 To get started, run the following commands: 
 
