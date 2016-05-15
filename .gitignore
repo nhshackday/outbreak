@@ -6,3 +6,4 @@ static/*
 htmlcov
 libpeerconnection.log
 outbreak/assets/css/.sass-cache/*
+local_settings.py

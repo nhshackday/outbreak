@@ -23,10 +23,10 @@ try:
 except ImportError:
     DATABASES = {
         'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_PATH, 'opal.sqlite'),
-        'USER': '',
-        'PASSWORD': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'outbreak',
+        'USER': 'outbreak',
+        'PASSWORD': 'caiZuo6u',
         'HOST': '',
         'PORT': ''
         }
