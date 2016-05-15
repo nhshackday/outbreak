@@ -3,9 +3,22 @@
   CLINICAL DECISION
 {% endblock %}
 {% block modal_body %}
-  <h2>DIAGNOSIS</h2>
-  <form form="form form-horizontal">
-    {% include "forms/diagnosis_form.html" %}
-  </form>
-
+  <div ng-show="status.saved == false">
+    <h2>DIAGNOSIS</h2>
+    <form form="form form-horizontal">
+      {% include "forms/diagnosis_form.html" %}
+    </form>
+  </div>
+  <div ng-show="status.saved == true">
+    <center>
+      <button class="btn btn-primary" ng-click="admit()">
+        ADMIT TO UNIT
+      </button>
+      <button class="btn btn-primary" ng-click="discharge()">
+        DISCHARGE
+      </button>
+    </center>
+  </div>
+  <div class="content-offset">
+    </div>
 {% endblock %}

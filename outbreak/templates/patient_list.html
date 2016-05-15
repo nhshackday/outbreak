@@ -54,7 +54,7 @@
       <div class="col-sm-3">
         <button class="btn btn-primary btn-lg add-patient"
                 ng-show="!profile.readonly"
-                ng-click="open_modal('FinishTriageCtrl','/templates/finish_triage.html', 'lg', {episode: row, options: options })">
+                ng-click="dischargeEpisode(row)">
           Clinical Decision
         </button>
       </div>

@@ -1,6 +1,9 @@
 angular.module('opal.controllers').controller(
     'FinishTriageCtrl',
-    function($scope, episode, options){
+    function($scope, $modalInstance, episode, options){
+        $scope.status = {
+            saved : false
+        }
         $scope.episode = episode;
         $scope.options = options;
   	    for (var name in options) {
@@ -10,13 +13,26 @@ angular.module('opal.controllers').controller(
   	    };
 
         $scope.save = function() {
-	        $modalInstance.close('cancel');
+	    $scope.status.saved = true;
         };
 
         $scope.cancel = function() {
 	        $modalInstance.close('cancel');
         };
 
+        $scope.admit = function(){
+            var tagging = $scope.episode.getItem('tagging', 0)
+                tagging.save({}).then(
+                    function(){
+                        $modalInstance.close('discharged')
+                    }
+                )
+
+        };
+
+        $scope.discharge = function(){
+            $scope.admit();
+        }
 
     }
 )

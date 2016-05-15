@@ -12,7 +12,7 @@ angular.module('opal.services').factory('OutbreakFlow', function(){
         exit: function(){
             return  {
                 'controller': 'FinishTriageCtrl',
-                'template'  : '/templates/oubtreak/finish_triage.html'
+                'template'  : '/templates/finish_triage.html'
             }
         }
 
