@@ -27,8 +27,8 @@ DATABASES = {
             'NAME': 'outbreak',
             'USER': 'outbreak',
             'PASSWORD': 'caiZuo6u',
-            'HOST': '',
-            'PORT': ''
+            'HOST': 'localhost',
+            'PORT': '5432'
         }
     }
 # DATABASES = {

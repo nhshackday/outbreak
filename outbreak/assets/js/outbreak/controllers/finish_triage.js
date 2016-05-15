@@ -8,5 +8,15 @@ angular.module('opal.controllers').controller(
   			    $scope[name + '_list'] = _.uniq(options[name]);
   		    };
   	    };
+
+        $scope.save = function() {
+	        $modalInstance.close('cancel');
+        };
+
+        $scope.cancel = function() {
+	        $modalInstance.close('cancel');
+        };
+
+
     }
 )

@@ -45,5 +45,10 @@ angular.module('opal.controllers').controller(
             // $modalInstance.close(result);
   	});
 
+        $scope.cancel = function() {
+	        $modalInstance.close('cancel');
+        };
+
+
     }
 )
