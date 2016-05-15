@@ -34,7 +34,8 @@ body {
 .btn {
   padding: 32px; }
 
-.datepicker btn {
+.ui-select-container span.btn,
+.dropdown-menu.datepicker button.btn {
   padding: 3px; }
 
 .list-buttons, .add-patient {
@@ -80,5 +81,8 @@ body {
 .modal-header h3 .bg-black {
   margin-top: -12px;
   padding: 12px; }
+
+.panel.panel-primary.login .panel-heading {
+  background-color: #23a5f5; }
 
 /*# sourceMappingURL=outbreak.css.map */
