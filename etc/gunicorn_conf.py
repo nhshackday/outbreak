@@ -1,4 +1,4 @@
-bind = "0.0.0.0:5567"
+bind = "0.0.0.0:80"
 logfile = "/tmp/outbreak.gunicorn.log"
 workers = 1
 timeout = 120
