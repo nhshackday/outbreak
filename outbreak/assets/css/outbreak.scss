@@ -37,6 +37,11 @@ body {
 .obs {
     background-color: $yellow;
 }
+
+.btn {
+      padding: 32px;
+
+}
 .list-buttons, .add-patient {
     margin-bottom: 10px;
 }
@@ -48,8 +53,8 @@ body {
 .btn-primary {
   background-color: $lightblue;
   border-color: $lightblue;
-  padding: 32px;
 }
+
 
 .btn-primary:hover,
 .btn-primary:focus {
@@ -65,4 +70,19 @@ body {
 
 .modal-header {
   background: $lightestblue;
-  }
+  padding: 0px 0px 0px 0px;
+  color: black;
+}
+.modal-header h3 {
+    padding-top: 12px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+.bg-black {
+    background: black;
+    color: white;
+}
+.modal-header h3 .bg-black {
+      margin-top: -12px;
+      padding: 12px;
+}

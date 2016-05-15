@@ -5,3 +5,4 @@ static/*
 .coverage
 htmlcov
 libpeerconnection.log
+outbreak/assets/css/.sass-cache/*

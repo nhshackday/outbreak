@@ -257,6 +257,7 @@ DEFAULT_DOMAIN = 'http://outbreak.com/'
 
 OPAL_BRAND_NAME = 'outbreak'
 VERSION_NUMBER  = '<0.0.1'
+OPAL_FLOW_SERVICE = 'OutbreakFlow'
 
 try:
     from local_settings import *

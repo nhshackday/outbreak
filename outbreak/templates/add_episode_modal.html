@@ -1,0 +1,26 @@
+{% load forms %}
+<div class="modal-header">
+  <h3>
+     NEW PATIENT
+     <span class="pull-right bg-black">
+       TRIAGE
+       {% icon "fa-cogs" %}
+     </span>
+  </h3>
+</div>
+<div class="modal-body">
+  <form class="form-horizontal" name="newEpisodeForm">
+    {% include models.Demographics.get_form_template %}
+     {% select label="Hospital" model="editing.location.hospital" lookuplist="hospital_list" %}
+    {% input label="Ward" model="editing.location.ward" %}
+    {% input label="Bed" model="editing.location.bed" %}
+    {% datepicker label="Date of admission" model="editing.date_of_admission" %}
+   </form>
+</div>
+<div class="modal-footer">
+ <button class="btn" ng-click="cancel()">Cancel</button>
+
+ <button class="btn btn-primary" ng-click="save()" ng-disabled="newEpisodeForm.date_of_birth.$invalid">
+    Next >
+  </button>
+ </div>
