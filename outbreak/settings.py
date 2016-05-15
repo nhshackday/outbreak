@@ -31,18 +31,18 @@ except ImportError:
             'PORT': ''
         }
     }
-DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(PROJECT_PATH, 'opal.sqlite'),
-            'USER': '',
-            'PASSWORD': '',
-            'HOST': '',
-            'PORT': ''
-        }
-    }
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(PROJECT_PATH, 'opal.sqlite'),
+#             'USER': '',
+#             'PASSWORD': '',
+#             'HOST': '',
+#             'PORT': ''
+#         }
+#     }
 
-print DATABASES
+# print DATABASES
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
