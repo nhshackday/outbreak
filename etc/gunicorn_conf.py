@@ -1,6 +1,6 @@
 bind = "0.0.0.0:5567"
-logfile = "/tmp/obsidian.gunicorn.log"
+logfile = "/tmp/outbreak.gunicorn.log"
 workers = 1
 timeout = 120
-accesslog = "/tmp/obsidian.access.log"
-errorlog = "/tmp/obsidian.error.log"
+accesslog = "/tmp/outbreak.access.log"
+errorlog = "/tmp/outbreak.error.log"
