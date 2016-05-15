@@ -30,23 +30,21 @@
     </div>
     <div class="row list-buttons">
       <div class="col-sm-3">
-        <button class="btn btn-primary btn-lg add-patient"
-                ng-show="!profile.readonly"
-                ng-click="addEpisode()">
+        <a class="btn btn-primary btn-lg add-patient" href="#/patient/[[row.demographics[0].patient_id]]">
           View Details
-        </button>
+        </a>
       </div>
       <div class="col-sm-3">
         <button class="btn btn-primary btn-lg add-patient"
                 ng-show="!profile.readonly"
-                ng-click="addEpisode()">
+                ng-click="newNamedItem(row, 'observation')">
           Observation
         </button>
       </div>
       <div class="col-sm-3">
         <button class="btn btn-primary btn-lg add-patient"
                 ng-show="!profile.readonly"
-                ng-click="addEpisode()">
+                ng-click="newNamedItem(row, 'drugs')">
           Treatment
         </button>
       </div>

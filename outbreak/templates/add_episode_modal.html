@@ -11,9 +11,6 @@
 <div class="modal-body">
   <form class="form-horizontal" name="newEpisodeForm">
     {% include models.Demographics.get_form_template %}
-    {% input label="Ward" model="editing.location.ward" %}
-    {% input label="Bed" model="editing.location.bed" %}
-    {% datepicker label="Date of admission" model="editing.date_of_admission" %}
    </form>
 </div>
 <div class="modal-footer">

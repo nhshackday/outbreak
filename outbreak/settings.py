@@ -23,15 +23,26 @@ try:
 except ImportError:
     DATABASES = {
         'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'outbreak',
-        'USER': 'outbreak',
-        'PASSWORD': 'caiZuo6u',
-        'HOST': '',
-        'PORT': ''
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'outbreak',
+            'USER': 'outbreak',
+            'PASSWORD': 'caiZuo6u',
+            'HOST': '',
+            'PORT': ''
+        }
+    }
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(PROJECT_PATH, 'opal.sqlite'),
+            'USER': '',
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': ''
         }
     }
 
+print DATABASES
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
