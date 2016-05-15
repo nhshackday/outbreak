@@ -12,7 +12,7 @@ def configure():
     run('mkdir -p /home/{0}/ohc'.format(env.user))
     with cd('/home/{0}/ohc'.format(env.user)):
         run('rm -rf outbreak')
-        run('git clone https://github.com/davidmiller/outbreak')
+        run('git clone https://github.com/nhshackday/outbreak')
     with cd('/home/{0}/ohc/outbreak'.format(env.user)):
         with prefix('WORKON_HOME=$HOME/.virtualenvs'):
             with prefix('source /etc/bash_completion.d/virtualenvwrapper'):
