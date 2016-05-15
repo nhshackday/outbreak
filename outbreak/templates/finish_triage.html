@@ -1,0 +1,11 @@
+{% extends 'modal_base.html' %}
+{% block title %}
+  CLINICAL DECISION
+{% endblock %}
+{% block modal_body %}
+  <h2>DIAGNOSIS</h2>
+  <form form="form form-horizontal">
+    {% include "forms/diagnosis_form.html" %}
+  </form>
+
+{% endblock %}

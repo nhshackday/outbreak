@@ -23,9 +23,12 @@
         Age: [[ row.demographics[0].fuzzy_age ]]
       </p>
     </div>
-    <div class="col-sm-4 obs">
-      <p>
-        Last Observations: [[ moment(row.observation[row.observation.length -1 ].created).t ]]
+    <div class="col-sm-4 obs" ng-class="{red: row.observation[row.observation.length -1].created.diff(moment()) < -3000 }">
+      <p ng-hide="row.observation.length < 1" >
+        <small>Last Observations: [[ row.observation[row.observation.length -1 ].created.fromNow() ]]</small>
+      </p>
+      <p ng-show="row.observation.length == 0">
+        No Observations
       </p>
     </div>
     <div class="row list-buttons">
@@ -51,7 +54,7 @@
       <div class="col-sm-3">
         <button class="btn btn-primary btn-lg add-patient"
                 ng-show="!profile.readonly"
-                ng-click="addEpisode()">
+                ng-click="open_modal('FinishTriageCtrl','/templates/finish_triage.html', 'lg', {episode: row, options: options })">
           Clinical Decision
         </button>
       </div>

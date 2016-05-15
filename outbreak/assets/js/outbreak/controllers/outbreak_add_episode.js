@@ -1,6 +1,6 @@
 angular.module('opal.controllers').controller(
     'OutbreakAddEpisodeCtrl',
-    function($modalInstance, $modal, $route, options){
+    function($scope, $modalInstance, $modal, $route, $q, Episode, UserProfile, options){
         modal = $modal.open({
   	    templateUrl: '/templates/modals/add_episode.html/',
   	    controller: 'AddEpisodeCtrl',
@@ -14,8 +14,35 @@ angular.module('opal.controllers').controller(
   	    }
   	}).result.then(function(result) {
   	    // The user has created the episode, or cancelled
-            $route.reload();
-            $modalInstance.close(result);
+
+            if(result){
+                $scope.episode = new Episode(result);
+      var deferred = $q.defer();
+      $modalInstance.close(deferred.promise);
+
+      var item = $scope.episode.newItem('presenting_symptoms');
+      $scope.episode.presenting_symptoms[0] = item;
+      modal = $modal.open({
+        templateUrl: '/templates/modals/presenting_symptoms.html/',
+        controller: 'EditItemCtrl',
+        size: 'lg',
+        resolve: {
+          item: function() { return item; },
+          options: function() { return options; },
+          episode: function() { return $scope.episode; },
+          profile: function(UserProfile) { return UserProfile }
+        }
+      }).result.then(
+          function(){deferred.resolve($scope.episode);
+                     $route.reload();},
+        function(){deferred.resolve($scope.episode)}
+      );
+            }else{
+                $modalInstance.close(result);
+            }
+
+
+            // $modalInstance.close(result);
   	});
 
     }

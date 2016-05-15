@@ -11,8 +11,8 @@ angular.module('opal.services').factory('OutbreakFlow', function(){
         },
         exit: function(){
             return  {
-                'controller': 'DischargeEpisodeCtrl',
-                'template'  : '/templates/modals/discharge_episode.html/'
+                'controller': 'FinishTriageCtrl',
+                'template'  : '/templates/oubtreak/finish_triage.html'
             }
         }
 

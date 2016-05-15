@@ -10,6 +10,7 @@ class Application(application.OpalApplication):
         'js/outbreak/routes.js',
         'js/outbreak/flow.js',
         'js/outbreak/controllers/outbreak_add_episode.js',
+        'js/outbreak/controllers/finish_triage.js',
         'js/opal/controllers/discharge.js',
 
     ]

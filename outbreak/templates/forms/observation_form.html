@@ -8,13 +8,13 @@
       <input class="form-control" type="text"
              placeholder="Systolic"
              ng-pattern="/^[0-9\.]+$/"
-             ng-model="editing.bp_systolic" />
+             ng-model="editing.observation.bp_systolic" />
     </div>
     <div class="col-sm-4">
       <input class="form-control" type="text"
              placeholder="Diastolic"
              ng-pattern="/^[0-9\.]+$/"
-             ng-model="editing.bp_diastolic"
+             ng-model="editing.observation.bp_diastolic"
              />
     </div>
   </div>
@@ -22,7 +22,7 @@
   <div class="form-group">
     <label class="control-label col-sm-3">Pulse</label>
     <div class="col-sm-2">
-      <input class="form-control" ng-model="editing.pulse" ng-pattern="/^[0-9\.]+$/">
+      <input class="form-control" ng-model="editing.observation.pulse" ng-pattern="/^[0-9\.]+$/">
     </div>
     <label class="control-label"><small>(beats/min)</small></label>
   </div>
@@ -30,7 +30,7 @@
   <div class="form-group">
     <label class="control-label col-sm-3">Resp rate</label>
     <div class="col-sm-2">
-      <input class="form-control" type="text" ng-model="editing.resp_rate" ng-pattern="/^[0-9\.]+$/">
+      <input class="form-control" type="text" ng-model="editing.observation.resp_rate" ng-pattern="/^[0-9\.]+$/">
     </div>
     <label class="control-label"><small>(breaths/min)</small></label>
   </div>
@@ -46,7 +46,7 @@
   <div class="form-group">
     <label class="control-label col-sm-3">Temp</label>
     <div class="col-sm-2">
-      <input class="form-control" type="text" ng-model="editing.temperature" ng-pattern="/^[0-9\.]+$/">
+      <input class="form-control" type="text" ng-model="editing.observation.temperature" ng-pattern="/^[0-9\.]+$/">
     </div>
     <label class="control-label"><small>(&deg; C)</small></label>
   </div>
@@ -54,7 +54,7 @@
   <div class="form-group">
     <label class="control-label col-sm-3">Height</label>
     <div class="col-sm-2">
-      <input class="form-control" type="text" ng-model="editing.height" ng-pattern="/^[0-9\.]+$/">
+      <input class="form-control" type="text" ng-model="editing.observation.height" ng-pattern="/^[0-9\.]+$/">
     </div>
     <label class="control-label"><small>(cm)</small></label>
   </div>
@@ -62,7 +62,7 @@
   <div class="form-group">
     <label class="control-label col-sm-3">Weight</label>
     <div class="col-sm-2">
-      <input class="form-control" type="text" ng-model="editing.weight" ng-pattern="/^[0-9\.]+$/">
+      <input class="form-control" type="text" ng-model="editing.observation.weight" ng-pattern="/^[0-9\.]+$/">
     </div>
     <label class="control-label"><small>(kg)</small></label>
   </div>
@@ -70,7 +70,7 @@
   <div class="form-group">
     <label class="control-label col-sm-3">MUAC</label>
     <div class="col-sm-2">
-      <input class="form-control" type="text" ng-model="editing.muac" ng-pattern="/^[0-9\.]+$/">
+      <input class="form-control" type="text" ng-model="editing.observation.muac" ng-pattern="/^[0-9\.]+$/">
     </div>
     <label class="control-label"><small>(cm)</small></label>
   </div>

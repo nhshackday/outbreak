@@ -28,8 +28,14 @@ body {
 .obs {
   background-color: #f8e71c; }
 
+.obs.red {
+  background-color: #E70101; }
+
 .btn {
   padding: 32px; }
+
+.datepicker btn {
+  padding: 3px; }
 
 .list-buttons, .add-patient {
   margin-bottom: 10px; }
@@ -66,6 +72,10 @@ body {
 .bg-black {
   background: black;
   color: white; }
+
+.bg-lightblue {
+  background: #50e3c2;
+  color: black; }
 
 .modal-header h3 .bg-black {
   margin-top: -12px;

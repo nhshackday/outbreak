@@ -14,14 +14,14 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-try:
-    import dj_database_url
+# try:
+#     import dj_database_url
 
-    DATABASES = {
-        'default': dj_database_url.config(default='sqlite:///' + PROJECT_PATH + '/opal.sqlite')
-    }
-except ImportError:
-    DATABASES = {
+#     DATABASES = {
+#         'default': dj_database_url.config(default='sqlite:///' + PROJECT_PATH + '/opal.sqlite')
+#     }
+# except ImportError:
+DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'outbreak',
