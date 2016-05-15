@@ -6,7 +6,11 @@ For development, to get started, run the following commands:
     python manage.py syncdb --migrate
     python manage.py runserver
 ```
+### Setup (local machine)
 
+Install the dependencies: 
+
+   pip install -r requirements.txt
 
 ### Deployment
 
