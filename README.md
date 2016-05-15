@@ -10,7 +10,7 @@ For development, to get started, run the following commands:
 
 Install the dependencies: 
 
-   pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ### Deployment
 
