@@ -31,16 +31,16 @@ DATABASES = {
             'PORT': '5432'
         }
     }
-# DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(PROJECT_PATH, 'opal.sqlite'),
-#             'USER': '',
-#             'PASSWORD': '',
-#             'HOST': '',
-#             'PORT': ''
-#         }
-#     }
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(PROJECT_PATH, 'opal.sqlite'),
+            'USER': '',
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': ''
+        }
+    }
 
 # print DATABASES
 # Hosts/domain names that are valid for this site; required if DEBUG is False
@@ -267,7 +267,7 @@ DEFAULT_DOMAIN = 'http://outbreak.com/'
 # Begins OPAL Settings you should edit !
 
 OPAL_BRAND_NAME = 'outbreak'
-VERSION_NUMBER  = '<0.0.1'
+VERSION_NUMBER  = '0.1.0'
 OPAL_FLOW_SERVICE = 'OutbreakFlow'
 
 try:
