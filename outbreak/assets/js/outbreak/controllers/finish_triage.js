@@ -1,16 +1,11 @@
 angular.module('opal.controllers').controller(
     'FinishTriageCtrl',
-    function($scope, $modalInstance, episode, options){
+    function($scope, $modalInstance, episode, referencedata){
         $scope.status = {
             saved : false
         }
         $scope.episode = episode;
-        $scope.options = options;
-  	    for (var name in options) {
-  		    if (name.indexOf('micro_test') != 0) {
-  			    $scope[name + '_list'] = _.uniq(options[name]);
-  		    };
-  	    };
+        _.extend($scope, referencedata.toLookuplists());
 
         $scope.save = function() {
 	    $scope.status.saved = true;

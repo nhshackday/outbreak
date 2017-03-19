@@ -13,6 +13,6 @@ requests==2.7.0
 djangorestframework==3.2.2
 django-compressor==1.5
 supervisor==3.0
-opal==0.7.1
+opal==0.8.0
 -e git+https://github.com/openhealthcare/opal-observations.git@v0.1.2#egg=opal_observations
 -e git+https://github.com/openhealthcare/opal-pathway.git@master#egg=opal_pathway
