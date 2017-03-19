@@ -16,5 +16,5 @@ class AllPatientsList(core.patient_lists.PatientList):
         models.Drugs
     ]
 
-    def get_queryset(self):
+    def get_queryset(self, **kwargs):
         return Episode.objects.all()
