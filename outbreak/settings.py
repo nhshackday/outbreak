@@ -170,6 +170,7 @@ INSTALLED_APPS = (
     'axes',
     'reversion',
     'rest_framework',
+    'rest_framework.authtoken',
     'compressor',
     'opal',
     'opal.core.search',
@@ -206,6 +207,14 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    )
 }
 
 # Begins custom settings
